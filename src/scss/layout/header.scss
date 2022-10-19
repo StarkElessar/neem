@@ -58,6 +58,11 @@
     text-align: center;
     position: relative;
     z-index: 5;
+    transition: $standartTrans;
+    &:hover {
+      border-color: $blueColor;
+      background-color: rgba($blueColor, 5%);
+    }
     @include media(768) {
       margin-left: 0;
     }
