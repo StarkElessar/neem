@@ -1,0 +1,137 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: $headerHeight;
+  border-bottom: 1px solid #d9dbdf;
+  background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 61.81%);
+  @include media(768) {
+    height: $headerHeight - 30;
+  }
+  &.menu-open {
+    border-bottom: none;
+    &::after {
+      background: linear-gradient(180deg, #e4f5f2 0%, #e4f5f2 62%);
+      border-bottom: 1px solid #d9dbdf;
+      opacity: 1;
+      z-index: 4;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 62%);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  // .header__logo
+  &__logo {
+    margin-right: rem(40);
+    @include media(768) {
+      margin-right: auto;
+    }
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__started
+  &__started {
+    margin-left: auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9dbdf;
+    border-radius: 2px;
+    height: rem(48);
+    width: rem(180);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    @include media(768) {
+      margin-left: 0;
+    }
+    @include media(425) {
+      width: 100%;
+    }
+    // .header__started_text
+    &_text {
+      font-weight: 600;
+      color: #263238;
+      margin-right: rem(10);
+    }
+    // .header__started_icon
+    &_icon {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+}
+
+.logo {
+  width: 118px;
+  height: 36px;
+  position: relative;
+  z-index: 5;
+}
+
+.icon-menu {
+  display: none;
+  background-color: transparent;
+  @include media(768) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #263238;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    &.menu-open {
+      span {
+        width: 0;
+        background-color: #263238;
+      }
+      &::before,
+      &::after {
+        background-color: #263238;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
