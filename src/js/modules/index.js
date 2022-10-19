@@ -1,3 +1,12 @@
+// FLS (Full Logging System)
+export function FLS(message) {
+	setTimeout(() => {
+		if (window.FLS) {
+			console.log(message);
+		}
+	}, 0);
+}
+
 export function isWebp() {
   // Проверка поддержки webp
   function testWebp(callback) {
