@@ -9,8 +9,10 @@
 @import 'config/vars';
 @import 'config/reset';
 @import 'config/scrollbar';
-@import 'config/global';
+@import 'config/base';
 
+@import 'layout/commons';
 @import 'layout/header';
 @import 'layout/menu';
+@import 'layout/promo';
 @import 'layout/footer';

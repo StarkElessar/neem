@@ -1,0 +1,187 @@
+.promo {
+  padding-bottom: rem(100);
+  // .promo__container
+  &__container {
+    display: flex;
+    @include media(1000) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  // .promo__description-column
+  &__description-column {
+    padding-top: rem(90);
+    flex: 0 1 100%;
+    @include media(1000) {
+      padding-top: rem(28);
+    }
+  }
+  // .promo__image-column
+  &__image-column {
+    flex: 1 0;
+    position: relative;
+    @include media(1000) {
+      @include adaptiveClamp('margin-top', 40, 57);
+    }
+    @include media(600) {
+      width: 560px;
+      max-width: 100%;
+    }
+  }
+  // .promo__title
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    @include adaptiveClamp('font-size', 64, 40);
+    line-height: math.div(77, 64);
+    color: #263238;
+    margin-bottom: rem(32);
+    max-width: rem(590);
+    @include media(1000) {
+      text-align: center;
+      max-width: 100%;
+    }
+    @include media(600) {
+      text-align: left;
+      margin-bottom: rem(24);
+    }
+    span {
+      color: #67c3d7;
+    }
+  }
+  // .promo__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(12);
+    @include media(1000) {
+      align-items: center;
+    }
+    @include media(600) {
+      align-items: flex-start;
+    }
+  }
+  // .promo__item
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: rem(14);
+  }
+  // .promo__item-icon
+  &__item-icon {
+    width: rem(24);
+    height: rem(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .promo__item-text
+  &__item-text {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    display: flex;
+    align-items: center;
+    color: #263238;
+    @include media(600) {
+      font-size: rem(14);
+    }
+    span {
+      font-weight: 700;
+      padding-right: rem(8);
+    }
+  }
+  // .promo__form
+  &__form {
+    margin-top: rem(40);
+    @include media(1000) {
+      width: 100%;
+      margin: rem(25) auto 0;
+    }
+  }
+  // .promo__field
+  &__field {
+    width: rem(485);
+    height: rem(50);
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #101859;
+    @include media(1000) {
+      margin: 0 auto;
+    }
+    @include media(600) {
+      flex-direction: column;
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+    input {
+      width: calc(100% - rem(146));
+      padding: 0 rem(16);
+      font-size: rem(18);
+      @include hidePlaceholder();
+      @include styledPlaceholder(#9192a1);
+      &::placeholder {
+        font-size: rem(16);
+      }
+      @include media(600) {
+        width: 100%;
+        margin-bottom: rem(12);
+        border: 1px solid #101859;
+        border-radius: 2px;
+        height: rem(38);
+      }
+    }
+    button {
+      width: rem(146);
+      font-weight: 600;
+      height: 100%;
+      background: #101859;
+      color: #fff;
+      transition: $standartTrans;
+      @include media(600) {
+        width: 100%;
+        height: rem(42);
+        border: 1px solid #101859;
+        border-radius: 2px;
+      }
+      &:hover {
+        background: lighten(#101859, 10%);
+      }
+    }
+  }
+  // .promo__img
+  &__img {
+    position: relative;
+    @include adaptiveClamp("width", 484, 360, 1440, 1000, 1);
+    @include adaptiveClamp("height", 566, 480, 1440, 1000, 1);
+    overflow: hidden;
+    @include media(1000) {
+      width: rem(484);
+      height: rem(566);
+    }
+    @include media(600) {
+      @include adaptiveClamp('width', 484, 210, 600, 320, 1);
+      @include adaptiveClamp('height', 566, 280, 600, 320, 1);
+      margin-left: auto;
+      margin-right: rem(16);
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .promo__label
+  &__label {
+    position: absolute;
+    box-shadow: 0px 8px 32px rgba(38, 50, 56, 0.15), 0px 2px 4px rgba(38, 50, 56, 0.08);
+  }
+}
