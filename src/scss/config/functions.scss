@@ -1,4 +1,4 @@
-// !TO %:
+// !PERCENT %:
 @function prc($pxOne, $pxTwo) {
   $result: math.div($pxOne, $pxTwo) * 100%;
   @return $result;

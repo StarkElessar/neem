@@ -1,8 +1,9 @@
 .header {
   width: 100%;
   height: $headerHeight;
-  border-bottom: 1px solid #d9dbdf;
-  background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 61.81%);
+  border-bottom: rem(1) solid #d9dbdf;
+  background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 62%);
+  background: transparent;
   z-index: 10;
   position: fixed;
   top: 0;
@@ -12,15 +13,16 @@
     height: $headerHeight - 30;
   }
   &.sticky {
-    background: linear-gradient(180deg, #f7fffe 0%, #ffffff 60%);
+    background: #fff;
     height: $headerHeight - 30;
-    box-shadow: 0 rem(2) 15px rgba(#000, 5%);
+    box-shadow: 0 rem(2) rem(15) rgba(#000, 5%);
+
   }
   &.menu-open {
     border-bottom: none;
     &::after {
       background: linear-gradient(180deg, #e4f5f2 0%, #e4f5f2 62%);
-      border-bottom: 1px solid #d9dbdf;
+      border-bottom: rem(1) solid #d9dbdf;
       opacity: 1;
       z-index: 14;
     }
@@ -60,8 +62,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #d9dbdf;
-    border-radius: 2px;
+    border: rem(1) solid #d9dbdf;
+    border-radius: rem(2);
     height: rem(48);
     width: rem(180);
     text-align: center;
@@ -93,8 +95,8 @@
 }
 
 .logo {
-  width: 118px;
-  height: 36px;
+  width: rem(118);
+  height: rem(36);
   position: relative;
   z-index: 15;
 }

@@ -1,6 +1,7 @@
 .promo {
   padding-top: $headerHeight;
   padding-bottom: rem(100);
+  background: linear-gradient(180deg, #e4f5f2 0%, #fff 62%);
   // .promo__container
   &__container {
     display: flex;
