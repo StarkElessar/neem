@@ -20,4 +20,8 @@ body {
   max-width: $widthContainer + $mainOffset * 2;
   margin: 0 auto;
   padding: 0 $mainOffset;
+  @include media(425) {
+    padding-left: rem(8);
+    padding-right: rem(8);
+  }
 }

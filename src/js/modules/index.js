@@ -59,11 +59,16 @@ export function headerFixed() {
   const header = document.querySelector('.header')
   const firstScreen = document.querySelector('[data-observ]')
   console.log('Is working...')
-  
-  const headerStickyObserver = new IntersectionObserver(([entry]) => {
-    header.classList.toggle('sticky', !entry.isIntersecting)
-  }, { threshold: [1] })
-  
+
+  const headerStickyObserver = new IntersectionObserver(
+    ([entry]) => {
+      header.classList.toggle('sticky', !entry.isIntersecting)
+    },
+    {
+      threshold: [0.995],
+    }
+  )
+
   if (firstScreen) {
     headerStickyObserver.observe(firstScreen)
   }

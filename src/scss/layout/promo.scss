@@ -1,13 +1,17 @@
 .promo {
-  padding-top: $headerHeight;
   padding-bottom: rem(100);
   background: linear-gradient(180deg, #e4f5f2 0%, #fff 62%);
   // .promo__container
   &__container {
     display: flex;
+    padding-top: $headerHeight;
     @include media(1000) {
       flex-direction: column;
       align-items: center;
+      padding-top: rem(130);
+    }
+    @include media(768) {
+      padding-top: rem(100);
     }
   }
   // .promo__description-column
@@ -15,7 +19,7 @@
     padding-top: rem(90);
     flex: 0 1 100%;
     @include media(1000) {
-      padding-top: rem(28);
+      padding-top: 0;
     }
   }
   // .promo__image-column

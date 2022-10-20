@@ -13,12 +13,10 @@
     align-items: flex-start;
     overflow: auto;
     padding: rem(100) rem(20) rem(20);
-    transition: left 350ms ease-in-out, opacity 150ms ease-in-out;
+    transition: left 350ms ease-in-out;
     row-gap: rem(20);
-    opacity: 0;
     &.menu-open {
       left: 0;
-      opacity: 1;
     }
   }
   // .menu__list
