@@ -559,6 +559,8 @@ body.lock {
 }
 
 .promo {
+  padding-top: 8.125rem;
+  position: relative;
   padding-bottom: 6.25rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#e4f5f2), color-stop(62%, #fff));
   background: -o-linear-gradient(top, #e4f5f2 0%, #fff 62%);
@@ -569,7 +571,15 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 100px;
+}
+
+.promo__container [data-observ] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
 }
 
 .promo__description-column {
@@ -1299,7 +1309,6 @@ body.lock {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 8.125rem;
   }
 
   .promo__description-column {
@@ -1456,7 +1465,7 @@ body.lock {
     width: 100%;
   }
 
-  .promo__container {
+  .promo {
     padding-top: 6.25rem;
   }
 
