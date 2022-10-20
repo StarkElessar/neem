@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   position: relative;
-  z-index: 4;
+  z-index: 14;
   @include media(768) {
     position: fixed;
     height: 100%;
@@ -13,10 +13,12 @@
     align-items: flex-start;
     overflow: auto;
     padding: rem(100) rem(20) rem(20);
-    transition: left 350ms ease-in-out;
+    transition: left 350ms ease-in-out, opacity 150ms ease-in-out;
     row-gap: rem(20);
+    opacity: 0;
     &.menu-open {
       left: 0;
+      opacity: 1;
     }
   }
   // .menu__list
@@ -50,7 +52,7 @@
     color: #263238;
     transition: $standartTrans;
     &:hover {
-      color: $blueColor;
+      color: #67c3d7;
     }
   }
 }

@@ -1,19 +1,31 @@
 .header {
-  position: relative;
   width: 100%;
   height: $headerHeight;
   border-bottom: 1px solid #d9dbdf;
   background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 61.81%);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background 350ms ease-in-out, height 350ms ease-in-out;
   @include media(768) {
+    height: $headerHeight - 30;
+  }
+  &.sticky {
+    background: linear-gradient(180deg, rgba(#f7fffe, 80%) 0%, rgba(#ffffff, 80%) 60%);
+    backdrop-filter: blur(2px);
     height: $headerHeight - 30;
   }
   &.menu-open {
     border-bottom: none;
+    &.sticky {
+      backdrop-filter: none;
+    }
     &::after {
       background: linear-gradient(180deg, #e4f5f2 0%, #e4f5f2 62%);
       border-bottom: 1px solid #d9dbdf;
       opacity: 1;
-      z-index: 4;
+      z-index: 14;
     }
   }
   &::after {
@@ -57,7 +69,7 @@
     width: rem(180);
     text-align: center;
     position: relative;
-    z-index: 5;
+    z-index: 15;
     transition: $standartTrans;
     &:hover {
       border-color: $blueColor;
@@ -88,5 +100,5 @@
   width: 118px;
   height: 36px;
   position: relative;
-  z-index: 5;
+  z-index: 15;
 }

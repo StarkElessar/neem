@@ -8,3 +8,4 @@ const mousePrlx = new MousePRLX({})
 
 flsFunctions.isWebp()
 flsFunctions.setburgerMenu()
+flsFunctions.headerFixed()

@@ -29,11 +29,9 @@ export function setburgerMenu() {
   const header = document.querySelector('.header')
   const menu = document.querySelector('.menu')
   let isLock = false
-  console.log(isLock)
 
   burgerBtn.addEventListener('click', () => {
     isLock = !isLock
-    console.log(isLock)
     toggleBodyLock(isLock)
 
     burgerBtn.classList.toggle('menu-open')
@@ -55,4 +53,18 @@ function toggleBodyLock(isLock) {
   }
   body.style.paddingRight = isLock ? `${lockPaddingValue}px` : '0px'
   body.classList.toggle('lock', isLock)
+}
+
+export function headerFixed() {
+  const header = document.querySelector('.header')
+  const firstScreen = document.querySelector('[data-observ]')
+  console.log('Is working...')
+  
+  const headerStickyObserver = new IntersectionObserver(([entry]) => {
+    header.classList.toggle('sticky', !entry.isIntersecting)
+  }, { threshold: [0.5] })
+  
+  if (firstScreen) {
+    headerStickyObserver.observe(firstScreen)
+  }
 }

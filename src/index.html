@@ -8,7 +8,7 @@
   <div class="wrapper">
     @@include('html/header.html', {})
     <main class="page">
-      <section class="page__promo promo">
+      <section class="page__promo promo" data-observ>
         <div class="promo__container">
           <div class="promo__description-column">
             <h1 class="promo__title">
@@ -63,7 +63,8 @@
             <div class="promo__img">
               <img src="@img/promo/bg.jpg" alt="Image Bg">
             </div>
-            <div class="promo__label label-promo label-promo_top" data-prlx-dxr data-prlx-mouse data-prlx-cx="400" data-prlx-cy="600">
+            <div class="promo__label label-promo label-promo_top" data-prlx-dxr data-prlx-mouse data-prlx-cx="400"
+              data-prlx-cy="600">
               <div class="label-promo__icon">
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -90,7 +91,8 @@
                 </div>
               </div>
             </div>
-            <div class="promo__label label-doctor label-promo_bottom" data-prlx-mouse data-prlx-cx="400" data-prlx-cy="600">
+            <div class="promo__label label-doctor label-promo_bottom" data-prlx-mouse data-prlx-cx="400"
+              data-prlx-cy="600">
               <div class="label-doctor__img">
                 <img src="@img/promo/doctor.png" alt="Doctor">
               </div>
@@ -100,7 +102,8 @@
               </div>
               <button class="label-doctor__btn" type="button">Start</button>
             </div>
-            <div class="promo__label label-promo label-promo_right" data-prlx-dxr data-prlx-mouse data-prlx-cx="400" data-prlx-cy="600">
+            <div class="promo__label label-promo label-promo_right" data-prlx-dxr data-prlx-mouse data-prlx-cx="400"
+              data-prlx-cy="600">
               <div class="label-promo__icon">
                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -121,6 +124,45 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__contact-us contact-us">
+        <div class="contact-us__container">
+          <div class="contact-us__image-column">
+            <div class="contact-us__image-bg">
+              <img src="@img/contact-us/bg.jpg" alt="Image Humen">
+            </div>
+            <img class="contact-us__logo" src="@img/contact-us/logo-white.png" alt="Logo Neem">
+            <p class="contact-us__alt-img">Get in touch with neem team</p>
+          </div>
+          <div class="contact-us__form-column">
+            <h3 class="contact-us__title">Contact Us</h3>
+            <form class="contact-us__form contact-form">
+              <div class="contact-form__field contact-form__field_row">
+                <input class="contact-form__input" type="text" placeholder="First name">
+                <input class="contact-form__input" type="text" placeholder="Last name">
+              </div>
+              <div class="contact-form__field">
+                <input class="contact-form__input" type="email" placeholder="Enter your email">
+              </div>
+              <div class="contact-form__field">
+                <input class="contact-form__input" type="text" placeholder="Enter your company name">
+              </div>
+              <div class="contact-form__field">
+                <textarea class="contact-form__input contact-form__input_textarea" cols="30" rows="10" placeholder="Message"></textarea>
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label">
+                  <input type="checkbox" name="check_form">
+                  <span class="contact-form__checkbox"></span>
+                  <span class="contact-form__text-label">I agree to receive other communications from Neem.</span>
+                </label>
+              </div>
+              <div class="contact-form__field">
+                <button class="contact-form__button" type="submit">Send message</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
