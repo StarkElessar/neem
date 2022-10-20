@@ -1,6 +1,10 @@
 .contact-us {
   padding-top: rem(100);
   padding-bottom: rem(100);
+  @include media(768) {
+    padding-top: rem(60);
+  padding-bottom: rem(48);
+  }
   // .contact-us__container
   &__container {
     display: flex;
