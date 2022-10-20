@@ -74,8 +74,8 @@
   &__checkbox {
     position: relative;
     display: block;
-    width: rem(18);
-    height: rem(18);
+    min-width: rem(18);
+    min-height: rem(18);
     background: #fff;
     border: rem(1) solid #d9dbdf;
     border-radius: rem(4);
