@@ -11,6 +11,10 @@
     &_row {
       display: flex;
       column-gap: rem(24);
+      @include media(768) {
+        flex-direction: column;
+        row-gap: rem(24);
+      }
     }
   }
   // .contact-form__input
@@ -24,6 +28,9 @@
     @include hidePlaceholder();
     @include styledPlaceholder(#9192A1);
     transition: $standartTrans;
+    @include media(768) {
+      padding: 0 rem(16);
+    }
     &:hover {
       border-color: darken(#d9dbdf, 20%);
     }
@@ -35,7 +42,10 @@
       padding-top: rem(12);
       padding-bottom: rem(12);
       height: rem(160);
-      resize: none; 
+      resize: none;
+      @include media(768) {
+        height: rem(120);
+      }
     }
   }
   // .contact-form__label

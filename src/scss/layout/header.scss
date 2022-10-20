@@ -12,15 +12,12 @@
     height: $headerHeight - 30;
   }
   &.sticky {
-    background: linear-gradient(180deg, rgba(#f7fffe, 80%) 0%, rgba(#ffffff, 80%) 60%);
-    backdrop-filter: blur(2px);
+    background: linear-gradient(180deg, #f7fffe 0%, #ffffff 60%);
     height: $headerHeight - 30;
+    box-shadow: 0 rem(2) 15px rgba(#000, 5%);
   }
   &.menu-open {
     border-bottom: none;
-    &.sticky {
-      backdrop-filter: none;
-    }
     &::after {
       background: linear-gradient(180deg, #e4f5f2 0%, #e4f5f2 62%);
       border-bottom: 1px solid #d9dbdf;
@@ -73,7 +70,6 @@
     transition: $standartTrans;
     &:hover {
       border-color: $blueColor;
-      background-color: rgba($blueColor, 5%);
       box-shadow: $hoverBoxShadow;
     }
     @include media(768) {

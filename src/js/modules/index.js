@@ -62,7 +62,7 @@ export function headerFixed() {
   
   const headerStickyObserver = new IntersectionObserver(([entry]) => {
     header.classList.toggle('sticky', !entry.isIntersecting)
-  }, { threshold: [0.5] })
+  }, { threshold: [1] })
   
   if (firstScreen) {
     headerStickyObserver.observe(firstScreen)
