@@ -408,7 +408,7 @@ body.lock {
   background: -webkit-gradient(linear, left top, left bottom, from(#e4f5f2), color-stop(62%, #ffffff));
   background: -o-linear-gradient(top, #e4f5f2 0%, #ffffff 62%);
   background: linear-gradient(180deg, #e4f5f2 0%, #ffffff 62%);
-  background: #E5F5F2;
+  background: transparent;
   z-index: 10;
   position: fixed;
   top: 0;
