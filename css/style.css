@@ -1520,6 +1520,11 @@ body.lock {
     font-size: 0.875rem;
   }
 
+  .contact-us {
+    padding-top: 3.75rem;
+    padding-bottom: 3rem;
+  }
+
   .contact-us__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
