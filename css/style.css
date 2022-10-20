@@ -1161,8 +1161,8 @@ body.lock {
 .contact-form__checkbox {
   position: relative;
   display: block;
-  width: 1.125rem;
-  height: 1.125rem;
+  min-width: 1.125rem;
+  min-height: 1.125rem;
   background: #fff;
   border: 0.0625rem solid #d9dbdf;
   border-radius: 0.25rem;
